@@ -1,0 +1,7 @@
+# ignore all logs
+*.log
+
+# ignore all models
+*.gguf
+
+bin/

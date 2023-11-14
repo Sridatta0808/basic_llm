@@ -1,0 +1,96 @@
+Langchain for LLM : 
+An open source dev framework for LLM application.
+
+Topics:
+
+Models 
+Prompts
+Parsers
+
+Indexes
+Chains
+Agents
+
+Models is the LLM model itself.
+Prompt an input that is supposed to be pased to the LLMs.
+Parsers it involves taking the output of these models and parsing it in the desired format.
+
+
+Prompt Templates : 
+Prompts can be long and detailed. Which might have lots of variables inside.
+it helps to dynamically load them.
+
+Reuse good promts when you can.
+
+Lanchain provides prompts for commmon operations such as :
+Summarization, QA , Connecting to different apis.
+
+Langchain Also supports Output Parsing, meaning that we will need the outputs
+to be in a certain format.
+
+main lanchain functions :
+prompt = ChatPromptTempalte.from_template()
+prompt.format_messages(variable1 = "ABC", variable2 = "XYZ")
+
+response_schemas
+
+output_parser.parse()
+
+
+CHAT MODELS IN LANGCHAIN:
+Alternative to Source LANG MODELS
+
+
+
+
+
+
+
+########################### MEMORY #########################
+
+1. Conversation Buffer Memory: 
+Allows storing messages and then extractst he messages in a variablle
+
+2. Conversation Buffer Window Memory :      
+Keeps list of the interactions of the conversation 
+over time. It only uses Last K Interaction.
+
+3. Conversation Token Buffer Memory : 
+This Memory Keeps a buffer of recent interactions in memory.
+Uses Token length rather than a number of interactions to determine when to flush
+
+4. Conversation Summary  Buffer Memory :  
+Creates a Summary of the conversation over time.
+
+Additional Memory Types: 
+
+1. vector Databases
+2. Entity Memory
+3. Combination of all.
+
+
+
+
+########################### Chains #########################
+1. LLM Chain
+Simple And Powerful chain.
+
+2. Simple Sequential Chains
+Execute List of chains
+
+3. Router
+Based on condition execute multiple chain.
+The only difference is the Condition based chain execution.
+
+
+
+########################### Q/A #########################
+Steps to Implement Q/A Chat bot for DOC retrival
+Scraping is the common methodology to get the data from Document
+1. Chunk the Document 
+2. Ingest to Vector Db.
+3. Get the embedding of the Question.
+4. Query from the Vector Db.
+5. Pass all the matched chunks to the LLM and get the response.
+
+########################### Evaluation #########################
